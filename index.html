@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>node RESTful API test</title>
+</head>
+<script type="text/javascript">
+	function testFetch(){
+		fetch('/user').then(function(response) {
+		  console.log(response);
+		  // Examine the text in the response  
+	      response.json().then(function(data) {  
+	        console.log(data);  
+	      });  
+		}).then(function(json) {
+		  console.log(json);
+		});
+	}
+</script>
+<body>
+	<button id="btn" onclick="testFetch()">
+		fetch!
+	</button>
+</body>
+</html>
